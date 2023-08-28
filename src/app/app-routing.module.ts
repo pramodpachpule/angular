@@ -32,7 +32,8 @@ const routes: Routes = [
   //     { path: 'edit', component: AddUserComponent },
   //   ],
   // },
-
+  // button
+  // dropdown
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then((x) => x.UserModule),
