@@ -32,6 +32,13 @@ const routes: Routes = [
   //     { path: 'edit', component: AddUserComponent },
   //   ],
   // },
+  //   canActivate: [roleGuard],
+  //   canActivateChild: [childGuard],
+  //   children: [
+  //     { path: 'view', component: ViewUserComponent },
+  //     { path: 'edit', component: AddUserComponent },
+  //   ],
+  // },
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then((x) => x.UserModule),
