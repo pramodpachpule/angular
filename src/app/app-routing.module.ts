@@ -32,7 +32,7 @@ const routes: Routes = [
   //     { path: 'edit', component: AddUserComponent },
   //   ],
   // },
-  // prmod Vikram pachpule
+
   {
     path: 'user',
     loadChildren: () => import('./user/user.module').then((x) => x.UserModule),
