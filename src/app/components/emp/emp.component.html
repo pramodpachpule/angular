@@ -1,0 +1,25 @@
+<form [formGroup]="empForm" (ngSubmit)="SaveEmp()">
+  <input type="text" placeholder="Code" formControlName="code" />
+  <br />
+  <input name="name" type="text" placeholder="Name" formControlName="name" />
+  <span *ngIf="name && name.invalid">Please enter valid name </span>
+  <br />
+  <input
+    name="conname"
+    type="text"
+    placeholder="Confirm Name"
+    formControlName="conname"
+  />
+  <span *ngIf="conname && conname.invalid">Please enter valid name </span>
+
+  <br />
+  <input type="text" placeholder="Email" formControlName="email" />
+  <span *ngIf="email && email.invalid">Please enter valid email </span>
+  <br />
+  <input type="text" placeholder="Phone" formControlName="phone" />
+  <br />
+  <input type="text" placeholder="Designation" formControlName="designation" />
+  <br />
+  <button type="submit">Save</button>
+  <span *ngIf="email && email.invalid" [ngClass]=""> {{ errormessage }} </span>
+</form>
